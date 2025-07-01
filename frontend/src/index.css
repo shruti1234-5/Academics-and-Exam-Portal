@@ -1,0 +1,224 @@
+body {
+  /* margin: 0; */
+  /* display: flex; */
+  /* place-items: center; */
+  /* min-width: 100vw; */
+  /* min-height: 100vh; */
+  overflow-x: hidden;
+}
+
+.custom-list li::marker {
+  color: #8C1E2D;
+}
+
+/* Generic Sidenav Styles */
+.admin-sidenav,
+.student-sidenav {
+  position: fixed; /* Make it fixed */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  /* background-color: #8C1E2D; */
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: white;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.sidenav-open {
+  width: 250px;
+}
+
+.sidenav-closed {
+  width: 60px;
+}
+
+.admin-sidenav .nav-link,
+.student-sidenav .nav-link {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.sidenav-closed .nav-link {
+  text-align: center;
+  padding-left: 0;
+}
+
+.sidenav-closed .nav-link span {
+  display: none;
+}
+
+.sidenav-toggle {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sidenav-closed .sidenav-toggle {
+  text-align: center;
+}
+
+.sidenav-open .sidenav-toggle {
+  text-align: left;
+  padding-left: 15px;
+}
+
+/* Dashboard Content Area */
+.dashboard-content {
+  background-color: #f0f2f5;
+}
+
+.dashboard-content h3 {
+  color: #343a40;
+  font-weight: 600;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* --- Custom Card Styling --- */
+.card-custom {
+  background-color: #ffffff;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.3rem 2rem 0 rgba(58, 59, 69, 0.2);
+}
+
+.card-header-custom {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  font-weight: bold;
+  color: #4e73df;
+}
+
+.card-body-custom {
+  padding: 1.25rem;
+}
+
+.card-footer-custom {
+    padding: 0.75rem 1.25rem;
+    background-color: #f8f9fc;
+    border-top: 1px solid #e3e6f0;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+/* Responsive Table */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
+}
+
+.table thead {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+/* Form & Button Styles */
+.form-control:focus {
+  border-color: #8C1E2D;
+  box-shadow: 0 0 0 0.2rem rgba(140, 30, 45, 0.25);
+}
+
+.btn-primary {
+  background-color: #00509E;
+  border-color: #00509E;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003f8a;
+  border-color: #003f8a;
+}
+
+/* Custom Table Styles */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    min-width: 650px; /* Responsive support */
+}
+
+.table-custom th,
+.table-custom td {
+    border: 1px solid #e3e6f0;
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+}
+
+.table-custom thead th {
+    background-color: #f8f9fc;
+    color: #4e73df;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+}
+
+.table-custom tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.scrollable-cell-content {
+  max-width: 100%; /* Same as the column width */
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.text-truncate {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-bottom: 5px; /* Add space for the scrollbar */
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari) */
+.text-truncate::-webkit-scrollbar {
+  height: 6px;
+}
+
+.text-truncate::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.text-truncate::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.text-truncate::-webkit-scrollbar-thumb:hover {
+  background: #999;
+} 

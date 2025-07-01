@@ -1,0 +1,314 @@
+#root {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  color: #222;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.scroll::-webkit-scrollbar{
+  display: none;
+}
+
+/* Navbar hover effect */
+.nav-hover {
+  transition: color 0.3s, background 0.3s;
+}
+.nav-hover:hover, .nav-hover:focus {
+  color: #FFD700 !important;
+  background: rgba(255,255,255,0.08);
+  border-radius: 5px;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s, box-shadow 0.3s !important;
+  cursor: pointer;
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.03) rotate(0deg) !important;
+  box-shadow: 0 12px 32px rgba(140,30,45,0.18), 0 2px 8px rgba(0,0,0,0.10) !important;
+  z-index: 2;
+}
+
+/* Remove fade-in-section animation, use only scroll-reveal */
+.fade-in-section {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+/* Section image animation */
+.section-img {
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+/* Slider animation */
+.slider-animate {
+  animation: sliderFadeIn 1.2s cubic-bezier(0.4,0,0.2,1) both;
+  will-change: transform;
+  transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.slider-animate:hover {
+  transform: scale(1.04) translateY(-8px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+/* Scroll reveal base state */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered card animation */
+.card-hover.scroll-reveal {
+  transition-property: opacity, transform, box-shadow;
+  transition-duration: 0.7s, 0.7s, 0.3s;
+}
+
+/* Section image advanced animation */
+.section-img.scroll-reveal {
+  transition: opacity 0.7s, transform 0.7s, box-shadow 0.7s;
+}
+.section-img.scroll-reveal.revealed {
+  box-shadow: 0 12px 36px rgba(140,30,45,0.18);
+  transform: scale(1.03) rotate(-1deg);
+}
+
+/* Remove border/focus box on nav items */
+.nav-link:focus, .nav-link:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: none;
+}
+
+/* Carousel fade effect for slider */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+}
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* --- Homepage Enhancements --- */
+.hero-section {
+  background: linear-gradient(10deg, #8C1E2D 0%, #00509E 100%);
+  color: #fff;
+  padding: 40px 0 30px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section .hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #f8f9fa;
+}
+.hero-btn {
+  background: linear-gradient(90deg, #00509E 0%, #8C1E2D 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 24px rgba(140,30,45,0.12);
+  transition: background 0.3s, transform 0.2s;
+}
+.hero-btn:hover {
+  background: linear-gradient(90deg, #8C1E2D 0%, #00509E 100%);
+  transform: scale(1.05);
+}
+
+/* Sticky Navbar */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(140,30,45,0.08);
+  background: #8C1E2D;
+}
+
+/* Navbar link enhancements */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #FFF4F0 !important;
+  background: rgba(255,255,255,0.10);
+  transform: scale(1.08);
+  text-decoration: underline;
+}
+
+/* Header logo hover */
+.header-logo {
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.header-logo:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(140,30,45,0.18);
+}
+
+/* Section backgrounds */
+.section-bg {
+  background: #FFF4F0;
+}
+.section-divider {
+  border-top: 2px solid #e3e6f0;
+  margin: 3rem 0;
+}
+
+/* Card/image zoom animation */
+.zoom-animate {
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.zoom-animate:hover {
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(140,30,45,0.18);
+  z-index: 2;
+}
+
+/* Fade-in/slide-in animation for sections */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+.animated-section {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+.animated-section.visible {
+  opacity: 1;
+}
+
+/* Footer */
+.site-footer {
+  background: #00509E;
+  color: #fff;
+  padding: 1.5rem 0 0.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Simple image zoom-in effect on hover */
+.img-hover-fancy {
+  transition: transform 0.4s;
+  border-radius: 1rem;
+}
+.img-hover-fancy:hover {
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+/* Hero logo in hero section */
+.hero-logo {
+  width: 240px;
+  height: 80px;
+  border-radius: 12%;
+  box-shadow: 0 4px 24px rgba(140,30,45,0.12);
+  background: #fff;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.hero-logo:hover {
+  transform: scale(1.08) rotate(0deg);
+  box-shadow: 0 8px 32px rgba(0,80,158,0.18);
+}
+
+/* Color utility classes for consistent use */
+.bg-primary-nou { background: #8C1E2D !important; color: #fff !important; }
+.bg-secondary-nou { background: #00509E !important; color: #fff !important; }
+.bg-accent-nou { background: #FFF4F0 !important; }
+.text-primary-nou { color: #8C1E2D !important; }
+.text-secondary-nou { color: #00509E !important; }
+.text-accent-nou { color: #FFF4F0 !important; }
+
+/* Gradient background utility for cards */
+.bg-hero-gradient {
+  background: linear-gradient(100deg, #8C1E2D 0%, #00509E 100%) !important;
+  color: #fff !important;
+}
+
+/*
+  For brand consistency, use .text-primary-nou or .text-secondary-nou on headings and important text.
+  Example: <h1 className="text-primary-nou">Title</h1>
+*/
